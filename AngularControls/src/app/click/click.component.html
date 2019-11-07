@@ -1,0 +1,24 @@
+<div>
+    <button (click)='onClickMe()'>Click me!
+
+    </button> {{clickMessage}}
+</div>
+<br>
+<div>
+    <input type="text" (keyup)='onKeyUp($event)'>
+    {{keyUpMessage}}
+</div>
+<div>
+    {{keyCode}}
+</div>
+<br>
+<div>
+    <input type="text" #myTextBox (keyup)='onKeyUpInputAsVariable(myTextBox.value)'>
+    {{keyUpMessageInputAsVariable}}
+</div>
+
+<br>
+<div>
+    <input type="text" #mySecondTextBox (keyup.enter)='onEnter(mySecondTextBox.value)'>
+    {{enterPressedMessage}}
+</div>
